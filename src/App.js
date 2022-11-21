@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="profile" element={<Profile />} />
-        <Route path="rockets" element={<Rockets />} />
+        <Route path="/" element={<Rockets />} />
         <Route path="mission" element={<Mission />} />
         <Route path="dragon" element={<Dragon />} />
       </Routes>
