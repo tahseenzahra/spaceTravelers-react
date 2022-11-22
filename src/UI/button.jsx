@@ -4,13 +4,13 @@ import React from 'react';
 
 export default function Button(
   {
-    title, id, className, Event 
+    buttonTag, id, className, Event 
   }
 )
 {
   return (
     <button id={id} className={className} onClick={Event} type="button">
-      {title}
+      {buttonTag}
     </button>
   );
 }
