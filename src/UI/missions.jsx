@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './button';
 
 export default function Missions({
-  mission, description, membership, membershipStyle, buttonTag, id, className, event 
+  mission, description, status, statusStyle, buttonTag, id, className, event 
 }) {
   return (
     <li className="flex even:bg-gray-100">
@@ -17,9 +17,9 @@ export default function Missions({
           w-1/1
           p-2 border"
         >
-          <div className={membershipStyle}
+          <div className={statusStyle}
           >
-            {membership}
+            {status}
           </div>
         </div>
         <div className="flex justify-center w-1/1 p-2 border">

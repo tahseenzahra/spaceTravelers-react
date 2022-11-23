@@ -9,15 +9,21 @@ export const loaded = createAsyncThunk(ACCEPT_MISSION, async () => {
   return data;
 });
 
-console.log(loaded);
-
 const missionSlice = createSlice({
   name: 'spaceTravelers',
-  initialState: [],
+  initialState: { missions: [], status: "idle" },
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(
-      loaded.fulfilled, (state, action) => action.payload,
+      loaded.fulfilled, (state, action) => {
+        console.log(action.payload);
+        state.missions = action.payload
+      }
+    //  )
+    //  .addCase(
+    //    loaded.pending, (state) => ({
+    //    ...state, status: "pending"
+    //  })
     );
   },
 });
