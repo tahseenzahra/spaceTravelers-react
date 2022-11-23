@@ -17,7 +17,7 @@ const dragonSlice = createSlice({
   name: 'dragons',
   initialState: { dragon: [], status: 'idle' },
   reducers: {
-    dragonStatus: (state, { payload }) => {
+    DragonStatus: (state, { payload }) => {
     /*eslint-disable */
       const data = state.dragon.map((x) => (x.id === payload ? { ...x, reservation: !x.reservation } : x));
       return {
@@ -60,7 +60,7 @@ const dragonSlice = createSlice({
   },
 });
 
-export const { dragonStatus } = dragonSlice.actions;
+export const { DragonStatus } = dragonSlice.actions;
 export const selectAllDragons = (state) => state.dragons;
 
 export default dragonSlice.reducer;
