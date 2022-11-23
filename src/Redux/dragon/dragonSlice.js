@@ -2,18 +2,8 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const persistProducts = (dragon) => {
-  if (typeof window !== "undefined")
-    localStorage.setItem("dragon", JSON.stringify(dragon));
+  if (typeof window !== 'undefined') localStorage.setItem('dragon', JSON.stringify(dragon));
 };
-
-let initialDragon = []
-
-try {
-  if (window !== "undefined")
-    initialDragon = JSON.parse(localStorage.getItem("dragon"));
-} catch (e) { }
-
-
 
 export const fetchDragons = createAsyncThunk(
   'dragon/fetchDragons',
