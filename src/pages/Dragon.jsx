@@ -11,22 +11,17 @@ export default function Dragon() {
 
   let LocalDragon = []
   
-  try {
-    if (window !== "undefined")
+  if (window !== "undefined")
       LocalDragon = JSON.parse(localStorage.getItem("dragon"));
-  } catch (e) { }
-
 
   let dragons = []
   LocalDragon === null ? dragons = dragon : dragons = LocalDragon
-
 
     const dispatch = useDispatch();
     React.useEffect(() => {
       dispatch(fetchDragons());
     }, []);
  
-
   const handeleReserve  = (id) => {
     dispatch(DragonStatus(id))
   }
@@ -34,12 +29,12 @@ export default function Dragon() {
   return (
     <>
       {dragons.map((dra, i) => (
-        <div key={i} className='flex mt-20 mx-5'>
-          <img className='h-[150px] w-[150px]' src={dra.flickr_images[0]} alt="planet" />
+        <div key={i} className='flex px-20 my-10 mr-60 mx-5'>
+          <img className='h-[220px] w-[250px]' src={dra.flickr_images[0]} alt="planet" />
           <div className='ml-5'>
-            <h1 className='font-bold'>{dra.name}</h1>
-            <p> <span className='bg-primary'>{dra.reservation === false ? <></> : 'reserved'}</span> {dra.description}</p>
-            <Button className= {dra.reservation === false ? "p-2 bg-blue-600 text-font" :'text-secondary border-solid border-2 border-grey-600 p-2'} Event = {() => handeleReserve(dra.id)} title={dra.reservation === false ?'Reserve Dragon' : 'cancelReservation'} />
+            <h1 className='font-bold mb-3 text-2xl'>{dra.name}</h1>
+            <p className='mb-3 text-sm font-serif'> {dra.reservation === false ? <></> :<span className='bg-primary rounded-lg px-2 pb-1 mb-4 mr-2'> reserved </span>} {dra.description}</p>
+            <Button className= {dra.reservation === false ? "p-2 bg-blue-600 rounded-lg text-font" :'text-secondary rounded-lg border-solid border-2 border-grey-600 p-2'} Event = {() => handeleReserve(dra.id)} title={dra.reservation === false ?'Reserve Dragon' : 'cancelReservation'} />
           </div>
         </div>
       ))}
