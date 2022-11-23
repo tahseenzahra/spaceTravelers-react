@@ -1,6 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const persistProducts = (dragon) => {
+  if (typeof window !== 'undefined') localStorage.setItem('dragon', JSON.stringify(dragon));
+};
+
 export const fetchDragons = createAsyncThunk(
   'dragon/fetchDragons',
   async () => {
@@ -20,6 +24,7 @@ const dragonSlice = createSlice({
     DragonStatus: (state, { payload }) => {
     /*eslint-disable */
       const data = state.dragon.map((x) => (x.id === payload ? { ...x, reservation: !x.reservation } : x));
+      persistProducts(data)
       return {
         ...state,
         dragon: data,
@@ -47,6 +52,7 @@ const dragonSlice = createSlice({
           });
           return data;
         });
+        // persistProducts(data)
         return {
           ...state,
           dragon: data,
@@ -61,6 +67,5 @@ const dragonSlice = createSlice({
 });
 
 export const { DragonStatus } = dragonSlice.actions;
-export const selectAllDragons = (state) => state.dragons;
 
 export default dragonSlice.reducer;
