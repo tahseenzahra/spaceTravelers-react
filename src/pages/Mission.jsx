@@ -1,48 +1,40 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Missions from "../UI/missions";
 import { loaded } from "../redux/missions/missionSlice";
 
 export default function Mission() {
+  const [isJoined, setJoined] = useState("false");
   const dispatch = useDispatch();
-  const missions = useSelector((state) => state.mission);
+  const { mission } = useSelector((state) => state.missions);
   useEffect(() => {
     dispatch(loaded());
   }, []);
-  console.log(missions);
-  const activeMember =
-    "bg-primary px-1 text-font place-content-center rounded font-semibold";
-  const inactiveMember =
-    "bg-secondary px-1 text-font uppercase place-content-center rounded font-semibold";
-  //const joinStyle =
-  //  "bg-transparent border-2 rounded p-2 text-secondary font-semibold text-sm";
-  //const leaveStyle =
-  //  "bg-transparent border-2 border-alert rounded px-2 py-0 text-alert font-semibold text-sm";
-  //const joinTag = 'Join Mission';
-  //const leaveTag = 'Leave Mission';
-  //const member = 'Active Member';
-  //const notMember = 'not a member';
+  const handleJoin = (e) => {
+    mission[0].join_mission = true;
+  };
   return (
     <ul
-      className='flex-col mt-4 mx-8'
-      id='missionList'
+      className="mission-container"
+      id="missionList"
     >
-      <li className='flex justify-between font-bold even:bg-gray-100'>
-        <h3 className='w-1/1 p-2 border'>Mission</h3>
-        <h3 className='w-5/7 p-2 border'>Description</h3>
-        <h3 className='w-1/1 p-2 border'>Status</h3>
-        <div className='w-1/1 border' />
+      <li className="mission-header">
+        <h3 className="mission-column">Mission</h3>
+        <h3 className="description-column">Description</h3>
+        <h3 className="status-column">Status</h3>
+        <div className="join-column" />
       </li>
-      {missions.map((mission) => (
+      {mission.map((mission) => (
         <Missions
-        mission={mission.mission_name}
-        description={mission.description}
-        status={notMember}
-        statusStyle={inactiveMember}
-        buttonTag={joinTag}
-        id={mission.mission_id}
-        className={joinStyle}
-        event={activeMember}
+          key={Math.random()}
+          mission={mission.mission_name}
+          description={mission.description}
+          status={isJoined ? "not a member" : "Active Member"}
+          statusStyle={isJoined ? "member-status inactive-member" : "member-status active-member"}
+          buttonTag={isJoined ? "Join Mission" : "Leave Mission"}
+          id={mission.mission_id}
+          className={isJoined ? "mission-btn join-btn" : "mission-btn leave-btn"}
+          event={(e) => {handleJoin(e)}}
         />
       ))}
     </ul>

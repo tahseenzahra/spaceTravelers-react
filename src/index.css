@@ -1,32 +1,111 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.mission-container {
+  display: grid;
+  margin: 2rem;
+  border: 1px solid gray;
+}
+
+.mission-header,
+.mission-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mission-column,
+.mission-name,
+.description-column,
+.status-column,
+.status-container,
+.join-column {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.mission-column,
+.mission-name {
+  flex: 1;
+}
+
+.description-column,
+.mission-description {
+  flex: 6;
+}
+
+.mission-description {
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+
+.status-column,
+.status-container {
+  flex: 1;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.joinbtn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+}
+
+.join-column,
+.joinbtn-container {
+  flex: 1;
+}
+
+.member-status {
+  color: white;
+  padding: 0 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.inactive-member {
+  background-color: gray;
+  text-transform: uppercase;
+}
+
+.active-member {
+  background-color: #60a5fa;
+}
+
+.mission-btn {
+  padding: 0 0.3rem;
+  font-weight: 600;
+  border-radius: 0.3rem;
+}
+
+.join-btn {
+  border: 2px solid gray;
+  color: gray;
+}
+
+.leave-btn {
+  color: #de4250;
+  border: 2px solid #de4250;
 }

@@ -2,32 +2,27 @@ import React from 'react';
 import Button from './button';
 
 export default function Missions({
-  mission, description, status, statusStyle, buttonTag, id, className, event 
+  mission, description, status, statusStyle, buttonTag, id, className, event,
 }) {
   return (
-    <li className="flex even:bg-gray-100">
-        <div className="w-1/1 p-2 border font-bold">{mission}</div>
-        <div className="w-5/7 p-2 border text-sm font-medium">
+    <li className="mission-item" key={id}>
+        <div className="mission-name">{mission}</div>
+        <div className="mission-description">
           {description}
         </div>
-        <div className="
-          flex
-          justify-center
-          items-center
-          w-1/1
-          p-2 border"
+        <div className="status-container"
         >
           <div className={statusStyle}
           >
             {status}
           </div>
         </div>
-        <div className="flex justify-center w-1/1 p-2 border">
+        <div className="joinbtn-container">
           <Button
-            title={buttonTag}
+            buttonTag={buttonTag}
             id={id}
             className={className}
-            onClick={event}
+            event={event}
           />
         </div>
       </li>
