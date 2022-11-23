@@ -10,7 +10,7 @@ export const fetchDragons = createAsyncThunk(
     } catch (error) {
       return error.message;
     }
-  }
+  },
 );
 
 const dragonSlice = createSlice({
@@ -18,10 +18,9 @@ const dragonSlice = createSlice({
   initialState: { dragon: [], status: 'idle' },
   reducers: {
     dragonStatus: (state, { payload }) => {
-      console.log(payload);
-      const data = state.dragon.map((x) =>
-        x.id === payload ? { ...x, reservation: !x.reservation } : x
-      );
+      const data = state.dragon.map((x) => (x.id === payload
+        ? { ...x, reservation: !x.reservation }
+        : x));
       return {
         ...state,
         dragon: data,
@@ -35,6 +34,7 @@ const dragonSlice = createSlice({
     }))
       .addCase(fetchDragons.fulfilled, (state, action) => {
         const data = [];
+        /*eslint-disable */
         action.payload.map((x) => {
           const { id, flickr_images, description, name } = x;
           data.push({
@@ -46,6 +46,7 @@ const dragonSlice = createSlice({
           });
           return data;
         });
+        /*eslint-disable */
         return {
           ...state,
           dragon: data,
