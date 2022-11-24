@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRockets, reserveRocket } from '../Redux/rockets/rockets';
 import Button from '../UI/button';
-
+import './Rockets.css';
 
 const Rocket = (props) => {
   const dispatch = useDispatch();
