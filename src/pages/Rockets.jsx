@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRockets, reserveRocket } from '../Redux/rockets/rockets';
 import Button from '../UI/button';
@@ -9,6 +10,13 @@ const Rocket = (props) => {
   const { rocket } = props;
   return (
     <div className="each">
+      <div className="pictFrame">
+        <img
+          src={rocket.flickr_images}
+          alt={rocket.rocket_name}
+          className="pict"
+        />
+      </div>
       <div className="infor">
         <h2>{rocket.rocket_name}</h2>
         <p>
@@ -26,6 +34,15 @@ const Rocket = (props) => {
       </div>
     </div>
   );
+};
+Rocket.propTypes = {
+  rocket: PropTypes.shape({
+    rocket_id: PropTypes.string,
+    rocket_name: PropTypes.string,
+    description: PropTypes.string,
+    reserved: PropTypes.bool,
+    flickr_images: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
 };
 
 const Rockets = () => {
