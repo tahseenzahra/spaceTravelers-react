@@ -9,6 +9,7 @@
 
 .each:hover {
   box-shadow: 0 0 10px black;
+  padding: 15px;
 }
 
 .pictFrame {
@@ -31,15 +32,17 @@
 }
 
 .reservRock {
-  background-color: aquamarine;
+  background-color: rgb(24 162 184 / 0.6);
+  color: white;
   border-radius: 3px;
   padding: 2px 5px;
   font-size: 0.8rem;
 }
 
 .rocketBtn:hover {
+  border: solid 1px rgb(24 162 184 / 0.6);
   background-color: white !important;
-  color: black !important;
+  color: rgb(24 162 184) !important;
 }
 
 button {
@@ -48,6 +51,9 @@ button {
   border-radius: 5px;
   transition: all;
   transition-duration: 0.5s;
+  background-color: rgb(24 162 184 / 0.5);
+  color: white;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
