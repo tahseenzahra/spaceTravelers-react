@@ -1,0 +1,605 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly Renders Header Correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex justify-between mt-5 shadow-lg pb-5"
+      >
+        <img
+          alt="img"
+          class="ml-20 w-[70px] h-[70px]"
+          src="/planet.png"
+        />
+        <h1
+          class="ml-5  mt-2 text-4xl font-bold w-full align-middle"
+        >
+          Space Travelers' Hub
+        </h1>
+        <div
+          class="w-full flex justify-end"
+        >
+          <ul
+            class="flex justify-end w-full gap-5 mt-5 mr-10"
+          >
+            <a
+              aria-current="page"
+              class="text-primary font-bold active"
+              href="/"
+            >
+              Rockets
+            </a>
+            <a
+              class="text-primary font-bold"
+              href="/mission"
+            >
+              Missions
+            </a>
+            <a
+              class="text-primary font-bold"
+              href="/dragon"
+            >
+              Dragons
+            </a>
+            <hr
+              class="bg-secondary h-6 w-px"
+            />
+            <a
+              class="text-primary font-bold"
+              href="/profile"
+            >
+              My Profile
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex justify-between mt-5 shadow-lg pb-5"
+    >
+      <img
+        alt="img"
+        class="ml-20 w-[70px] h-[70px]"
+        src="/planet.png"
+      />
+      <h1
+        class="ml-5  mt-2 text-4xl font-bold w-full align-middle"
+      >
+        Space Travelers' Hub
+      </h1>
+      <div
+        class="w-full flex justify-end"
+      >
+        <ul
+          class="flex justify-end w-full gap-5 mt-5 mr-10"
+        >
+          <a
+            aria-current="page"
+            class="text-primary font-bold active"
+            href="/"
+          >
+            Rockets
+          </a>
+          <a
+            class="text-primary font-bold"
+            href="/mission"
+          >
+            Missions
+          </a>
+          <a
+            class="text-primary font-bold"
+            href="/dragon"
+          >
+            Dragons
+          </a>
+          <hr
+            class="bg-secondary h-6 w-px"
+          />
+          <a
+            class="text-primary font-bold"
+            href="/profile"
+          >
+            My Profile
+          </a>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`dragon renders correctly Renders dragon Correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div />
+  </body>,
+  "container": <div />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`mission renders correctly Renders mission Correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="flex-col mt-4 mx-8"
+      >
+        <div
+          class="kanaderalla"
+        >
+          Hala
+        </div>
+        <li
+          class="flex justify-between font-bold even:bg-gray-100"
+        >
+          <h3
+            class="w-1/1 p-2 border"
+          >
+            Mission
+          </h3>
+          <h3
+            class="w-5/7 p-2 border"
+          >
+            Description
+          </h3>
+          <h3
+            class="w-1/1 p-2 border"
+          >
+            Status
+          </h3>
+          <div
+            class="w-1/1 border"
+          />
+        </li>
+        <li
+          class="flex even:bg-gray-100"
+        >
+          <div
+            class="w-1/1 p-2 border font-bold"
+          >
+            Thaicom
+          </div>
+          <div
+            class="w-5/7 p-2 border text-sm font-medium"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
+          </div>
+          <div
+            class="
+ flex
+ justify-center
+ items-center
+ w-1/1
+ p-2 border"
+          >
+            <div
+              class="
+ bg-secondary
+ px-1
+ text-font
+ uppercase
+ place-content-center
+ rounded
+ font-semibold"
+            >
+              not a memeber
+            </div>
+          </div>
+          <div
+            class="flex justify-center w-1/1 p-2 border"
+          >
+            <button
+              class="bg-transparent border-2 rounded p-2 text-secondary font-semibold text-sm"
+              id="id"
+              type="button"
+            >
+              Join Mission
+            </button>
+          </div>
+        </li>
+        <li
+          class="flex even:bg-gray-100"
+        >
+          <div
+            class="w-1/1 p-2 border font-bold"
+          >
+            Thaicom
+          </div>
+          <div
+            class="w-5/7 p-2 border text-sm font-medium"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
+          </div>
+          <div
+            class="
+ flex
+ justify-center
+ items-center
+ w-1/1
+ p-2 border"
+          >
+            <div
+              class="
+ bg-primary
+ px-1
+ text-font
+ place-content-center
+ rounded
+ font-semibold"
+            >
+              Active Member
+            </div>
+          </div>
+          <div
+            class="flex justify-center w-1/1 p-2 border"
+          >
+            <button
+              class="bg-transparent border-2 border-alert rounded px-2 py-0 text-alert font-semibold text-sm"
+              id="id"
+              type="button"
+            >
+              Leave Mission
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="flex-col mt-4 mx-8"
+    >
+      <div
+        class="kanaderalla"
+      >
+        Hala
+      </div>
+      <li
+        class="flex justify-between font-bold even:bg-gray-100"
+      >
+        <h3
+          class="w-1/1 p-2 border"
+        >
+          Mission
+        </h3>
+        <h3
+          class="w-5/7 p-2 border"
+        >
+          Description
+        </h3>
+        <h3
+          class="w-1/1 p-2 border"
+        >
+          Status
+        </h3>
+        <div
+          class="w-1/1 border"
+        />
+      </li>
+      <li
+        class="flex even:bg-gray-100"
+      >
+        <div
+          class="w-1/1 p-2 border font-bold"
+        >
+          Thaicom
+        </div>
+        <div
+          class="w-5/7 p-2 border text-sm font-medium"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
+        </div>
+        <div
+          class="
+ flex
+ justify-center
+ items-center
+ w-1/1
+ p-2 border"
+        >
+          <div
+            class="
+ bg-secondary
+ px-1
+ text-font
+ uppercase
+ place-content-center
+ rounded
+ font-semibold"
+          >
+            not a memeber
+          </div>
+        </div>
+        <div
+          class="flex justify-center w-1/1 p-2 border"
+        >
+          <button
+            class="bg-transparent border-2 rounded p-2 text-secondary font-semibold text-sm"
+            id="id"
+            type="button"
+          >
+            Join Mission
+          </button>
+        </div>
+      </li>
+      <li
+        class="flex even:bg-gray-100"
+      >
+        <div
+          class="w-1/1 p-2 border font-bold"
+        >
+          Thaicom
+        </div>
+        <div
+          class="w-5/7 p-2 border text-sm font-medium"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
+        </div>
+        <div
+          class="
+ flex
+ justify-center
+ items-center
+ w-1/1
+ p-2 border"
+        >
+          <div
+            class="
+ bg-primary
+ px-1
+ text-font
+ place-content-center
+ rounded
+ font-semibold"
+          >
+            Active Member
+          </div>
+        </div>
+        <div
+          class="flex justify-center w-1/1 p-2 border"
+        >
+          <button
+            class="bg-transparent border-2 border-alert rounded px-2 py-0 text-alert font-semibold text-sm"
+            id="id"
+            type="button"
+          >
+            Leave Mission
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`rocket renders correctly Renders rocket Correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <h1>
+          Rockets
+        </h1>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <h1>
+        Rockets
+      </h1>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
