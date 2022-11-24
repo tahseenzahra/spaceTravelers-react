@@ -1,5 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { current } from '@reduxjs/toolkit'; 
+import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit';
 
 const apiUrl = 'https://api.spacexdata.com/v3/rockets';
 
