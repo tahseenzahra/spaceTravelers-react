@@ -4,16 +4,15 @@ import { loaded, missionStatus } from "../redux/missions/missionSlice";
 import Missions from "../UI/missions";
 
 export default function Mission() {
-  const { mission } = useSelector((state) => state.missions);
-  
+  const mission = useSelector((state) => state.mission);
   const dispatch = useDispatch();
-  console.log('useeffect');
-  useEffect(() => {
+  useEffect{
     dispatch(loaded());
-  }, []);
+  }
   const handleJoin = (id) => {
     dispatch(missionStatus(id));
   };
+
   return (
     <ul
       className='mission-container'
@@ -26,24 +25,23 @@ export default function Mission() {
         <div className='join-column' />
       </li>
       {mission.map((mission) => (
+        console.log(mission),
         <Missions
           key={Math.random()}
-          mission={mission.mission_name}
+          mission={mission.name}
           description={mission.description}
-          status={mission.join_mission ? "Active Member" : "not a member"}
+          status={mission.isJoined ? "Active Member" : "not a member"}
           statusStyle={
-            mission.join_mission
+            mission.isJoined
               ? "member-status active-member"
               : "member-status inactive-member"
           }
-          buttonTag={mission.join_mission ? "Leave Mission" : "Join Mission"}
-          id={mission.mission_id}
+          buttonTag={mission.isJoined ? "Leave Mission" : "Join Mission"}
+          id={mission.id}
           className={
-            mission.join_mission
-              ? "mission-btn leave-btn"
-              : "mission-btn join-btn"
+            mission.isJoined ? "mission-btn leave-btn" : "mission-btn join-btn"
           }
-          event={() => handleJoin(mission.mission_id)}
+          event={() => handleJoin(mission.id)}
         />
       ))}
     </ul>
