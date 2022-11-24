@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { current } from '@reduxjs/toolkit'; 
 
 const apiUrl = 'https://api.spacexdata.com/v3/rockets';
 
@@ -12,9 +13,9 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    reserveRocket: (state, action) => state.map((rocket) => {
+    reserveRocket: (state, action) => current(state).map((rocket) => {
       if (rocket.rocket_id === action.payload) {
-        return { ...rocket, reserved: !rocket.reserved };
+        return { ...rocket, active: !rocket.active };
       }
       return rocket;
     }),
