@@ -18,7 +18,7 @@ const Rocket = (props) => {
         />
       </div>
       <div className="infor">
-        <h2>{rocket.rocket_name}</h2>
+        <h2 className="text-3xl">{rocket.rocket_name}</h2>
         <p>
           {rocket.reserved && <span className="reservRock">Reserved</span>}
           {rocket.description}
@@ -26,7 +26,7 @@ const Rocket = (props) => {
         <Button
           variant={rocket.reserved ? 'outline-primary' : 'primary'}
           type="button"
-          className="rocketBtn"
+          className="rocketBtn p-4 bg-primary opacity-50"
           onClick={() => dispatch(reserveRocket(rocket.rocket_id))}
         >
           {rocket.reserved ? 'Cancel reservation' : 'Reserve Rockets'}
