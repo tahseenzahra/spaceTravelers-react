@@ -13,23 +13,23 @@ const Rocket = (props) => {
       <div className="pictFrame">
         <img
           src={rocket.flickr_images}
-          alt={rocket.rocket_name}
+          alt={rocket.name}
           className="pict"
         />
       </div>
       <div className="infor">
-        <h2 className="text-3xl">{rocket.rocket_name}</h2>
+        <h2 className="text-3xl">{rocket.name}</h2>
         <p>
-          {rocket.active && <span className="reservRock">Reserved</span>}
+          {rocket.reserve && <span className="reservRock">Reserved</span>}
           {rocket.description}
         </p>
         <Button
-          variant={rocket.active === true ? 'outline-primary' : 'primary'}
+          variant={rocket.reserve === true ? 'outline-primary' : 'primary'}
           type="button"
           className="rocketBtn p-4 bg-primary opacity-50"
-          onClick={() => dispatch(reserveRocket(rocket.rocket_id))}
+          onClick={() => dispatch(reserveRocket(rocket.id))}
         >
-          {rocket.active === true ? 'Cancel reservation' : 'Reserve Rockets'}
+          {rocket.reserve === true ? 'Cancel reservation' : 'Reserve Rockets'}
         </Button>
       </div>
     </div>
@@ -38,7 +38,7 @@ const Rocket = (props) => {
 Rocket.propTypes = {
   rocket: PropTypes.shape({
     rocket_id: PropTypes.string,
-    rocket_name: PropTypes.string,
+    name: PropTypes.string,
     description: PropTypes.string,
     reserved: PropTypes.bool,
     flickr_images: PropTypes.arrayOf(PropTypes.string),

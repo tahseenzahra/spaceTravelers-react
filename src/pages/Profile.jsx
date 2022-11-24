@@ -12,7 +12,7 @@ export default function Profile() {
   } catch (e) { }
 
 
-  const rocketProfile = rocketsData.filter(rocket => rocket.active === true)
+  const rocketProfile = rocketsData.filter(rocket => rocket.reserve === true)
   const dragonProfile = LocalDragon.filter(dra => dra.reservation === true) || []
   return (
     <div className='flex justify-between px-40'>
@@ -27,7 +27,7 @@ export default function Profile() {
           <tbody>
             {rocketProfile.map((rocket) => (
               <tr>
-                <td className="border-solid border-2 border-grey-300 p-3 w-[500px]">{rocket.rocket_name}</td>
+                <td className="border-solid border-2 border-grey-300 p-3 w-[500px]">{rocket.name}</td>
               </tr>
             ))}
           </tbody>

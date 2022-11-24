@@ -5,7 +5,15 @@ const apiUrl = 'https://api.spacexdata.com/v3/rockets';
 const getRockets = createAsyncThunk('rockets/retrieveRockets', async () => {
   const response = await fetch(apiUrl);
   const rocketList = await response.json();
-  return rocketList;
+  const transformedData = rocketList.map((rocket) => ({
+    id: rocket.id,
+    name: rocket.rocket_name,
+    description: rocket.description,
+    flickr_images: rocket.flickr_images,
+    reserve: false,
+  }));
+
+  return transformedData;
 });
 const initialState = [];
 const rocketsSlice = createSlice({
@@ -13,8 +21,8 @@ const rocketsSlice = createSlice({
   initialState,
   reducers: {
     reserveRocket: (state, action) => current(state).map((rocket) => {
-      if (rocket.rocket_id === action.payload) {
-        return { ...rocket, active: !rocket.active };
+      if (rocket.id === action.payload) {
+        return { ...rocket, reserve: !rocket.reserve };
       }
       return rocket;
     }),
