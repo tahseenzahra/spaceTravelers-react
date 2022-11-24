@@ -1,8 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 
 export default function Profile() {
-
+  const rocketsData = useSelector((state) => state.rockets);
   let LocalDragon = []
   
   try {
@@ -10,8 +11,9 @@ export default function Profile() {
       LocalDragon = JSON.parse(localStorage.getItem("dragon"));
   } catch (e) { }
 
-  const dragonProfile = LocalDragon.filter(dra => dra.reservation === true) || []
 
+  const rocketProfile = rocketsData.filter(rocket => rocket.active === true)
+  const dragonProfile = LocalDragon.filter(dra => dra.reservation === true) || []
   return (
     <div className='flex justify-between px-40'>
 
@@ -23,15 +25,11 @@ export default function Profile() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="border-solid border-2 border-grey-300 p-3 w-[500px]">The Sliding</td>
-            </tr>
-            <tr>
-              <td className="border-solid border-2 border-grey-300 p-3 w-[500px]">The Sliding</td>
-            </tr>
-            <tr>
-              <td className="border-solid border-2 border-grey-300 p-3 w-[500px]">The Sliding</td>
-            </tr>
+            {rocketProfile.map((rocket) => (
+              <tr>
+                <td className="border-solid border-2 border-grey-300 p-3 w-[500px]">{rocket.rocket_name}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
