@@ -10,7 +10,7 @@ export default function Profile() {
       LocalDragon = JSON.parse(localStorage.getItem("dragon"));
   } catch (e) { }
 
-  const dragonProfile = LocalDragon.filter(dra => dra.reservation === true)
+  const dragonProfile = LocalDragon.filter(dra => dra.reservation === true) || []
 
   return (
     <div className='flex justify-between px-40'>
