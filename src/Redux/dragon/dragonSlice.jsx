@@ -1,22 +1,16 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const persistProducts = (dragon) => {
   if (typeof window !== 'undefined') localStorage.setItem('dragon', JSON.stringify(dragon));
 };
 
 export const fetchDragons = createAsyncThunk(
-  'dragon/fetchDragons',
-  async () => {
-    try {
-      const data = await axios.get('https://api.spacexdata.com/v3/dragons');
-      return data.data;
-    } catch (error) {
-      return error.message;
-    }
+  'dragon/fetchDragons', async () => {
+    const response = await fetch('https://api.spacexdata.com/v3/dragons');
+    const data = await response.json();
+    return data;
   },
 );
-
 const dragonSlice = createSlice({
   name: 'dragons',
   initialState: { dragon: [], status: 'idle' },
