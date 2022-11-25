@@ -4,14 +4,14 @@ import { DragonStatus, fetchDragons } from '../redux/dragon/dragonSlice';
 describe('Redux store', () => {
   it('should have the correct initial state', () => {
     expect(store.getState()).toEqual({
-        dragons: {
-            dragon: [],
-            status: "idle"
-          },
-          rockets: [],
-          mission: {
-            missions: [],
-          },
+      dragons: {
+        dragon: [],
+        status: 'idle',
+      },
+      rockets: [],
+      mission: {
+        missions: [],
+      },
     });
   });
 
