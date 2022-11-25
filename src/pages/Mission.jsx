@@ -7,8 +7,7 @@ export default function Mission() {
   const { missions } = useSelector((state) => state.mission);
   let localMissions = [];
 
-  localMissions = JSON.parse(localStorage.getItem("missions"));
-  console.log(localMissions);
+  localMissions = JSON.parse(localStorage.getItem("mission"));
   let mission = [];
   localMissions === null ? (mission = missions) : (mission = localMissions);
 

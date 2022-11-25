@@ -14,13 +14,12 @@ const missionSlice = createSlice({
   initialState: { missions: [] },
   reducers: {
     missionStatus: (state, { payload }) => {
-      console.log(current(state))
       const data = current(state).missions.map(
         (item) => (item.id === payload
           ? { ...item, isJoined: !item.isJoined }
           : item),
       );
-      localStorage.setItem('mission', JSON.stringify({ data }));
+      localStorage.setItem('mission', JSON.stringify(data));
       return {
         ...state,
         missions: data,
