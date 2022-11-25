@@ -9,7 +9,7 @@ import Rockets from '../pages/Rockets';
 import Mission from '../pages/Mission';
 import Dragon from '../pages/Dragon';
 
-import store from '../Redux/configureStore';
+import store from '../Redux/Store';
 
 describe('Header renders correctly', () => {
   test('Renders Header Correctly', () => {

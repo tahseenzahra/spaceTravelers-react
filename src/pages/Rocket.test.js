@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Rockets from './Rockets';
-import store from '../Redux/configureStore';
+import store from '../Redux/Store';
 
 describe('Rocket components', () => {
   it('Render component', () => {
