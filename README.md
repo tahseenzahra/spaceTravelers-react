@@ -21,8 +21,7 @@ COMING SOON ...
 To get a local copy up and running follow these simple example steps.
 
 - Open up your command line
-- Clone this repo to your machine by using Git clone: Git clone `https://github.com/tahseenzahra/spaceTravelers-react
-.git`
+- Clone this repo to your machine by using Git clone: Git clone `https://github.com/tahseenzahra/spaceTravelers-react.git`
 
 # Prerequisite
 
