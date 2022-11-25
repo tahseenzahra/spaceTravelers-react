@@ -20,7 +20,7 @@ const missionSlice = createSlice({
           ? { ...item, isJoined: !item.isJoined }
           : item),
       );
-      localStorage.setItem('mission', JSON.stringify({ data }));
+      localStorage.setItem('mission', JSON.stringify(data));
       return {
         ...state,
         missions: data,
