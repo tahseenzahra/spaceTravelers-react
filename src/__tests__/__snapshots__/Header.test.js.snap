@@ -230,250 +230,60 @@ Object {
   "baseElement": <body>
     <div>
       <ul
-        class="flex-col mt-4 mx-8"
+        class="mission-container"
+        id="missionList"
       >
-        <div
-          class="kanaderalla"
-        >
-          Hala
-        </div>
         <li
-          class="flex justify-between font-bold even:bg-gray-100"
+          class="mission-header"
         >
           <h3
-            class="w-1/1 p-2 border"
+            class="mission-column"
           >
             Mission
           </h3>
           <h3
-            class="w-5/7 p-2 border"
+            class="description-column"
           >
             Description
           </h3>
           <h3
-            class="w-1/1 p-2 border"
+            class="status-column"
           >
             Status
           </h3>
           <div
-            class="w-1/1 border"
+            class="join-column"
           />
-        </li>
-        <li
-          class="flex even:bg-gray-100"
-        >
-          <div
-            class="w-1/1 p-2 border font-bold"
-          >
-            Thaicom
-          </div>
-          <div
-            class="w-5/7 p-2 border text-sm font-medium"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
-          </div>
-          <div
-            class="
- flex
- justify-center
- items-center
- w-1/1
- p-2 border"
-          >
-            <div
-              class="
- bg-secondary
- px-1
- text-font
- uppercase
- place-content-center
- rounded
- font-semibold"
-            >
-              not a memeber
-            </div>
-          </div>
-          <div
-            class="flex justify-center w-1/1 p-2 border"
-          >
-            <button
-              class="bg-transparent border-2 rounded p-2 text-secondary font-semibold text-sm"
-              id="id"
-              type="button"
-            >
-              Join Mission
-            </button>
-          </div>
-        </li>
-        <li
-          class="flex even:bg-gray-100"
-        >
-          <div
-            class="w-1/1 p-2 border font-bold"
-          >
-            Thaicom
-          </div>
-          <div
-            class="w-5/7 p-2 border text-sm font-medium"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
-          </div>
-          <div
-            class="
- flex
- justify-center
- items-center
- w-1/1
- p-2 border"
-          >
-            <div
-              class="
- bg-primary
- px-1
- text-font
- place-content-center
- rounded
- font-semibold"
-            >
-              Active Member
-            </div>
-          </div>
-          <div
-            class="flex justify-center w-1/1 p-2 border"
-          >
-            <button
-              class="bg-transparent border-2 border-alert rounded px-2 py-0 text-alert font-semibold text-sm"
-              id="id"
-              type="button"
-            >
-              Leave Mission
-            </button>
-          </div>
         </li>
       </ul>
     </div>
   </body>,
   "container": <div>
     <ul
-      class="flex-col mt-4 mx-8"
+      class="mission-container"
+      id="missionList"
     >
-      <div
-        class="kanaderalla"
-      >
-        Hala
-      </div>
       <li
-        class="flex justify-between font-bold even:bg-gray-100"
+        class="mission-header"
       >
         <h3
-          class="w-1/1 p-2 border"
+          class="mission-column"
         >
           Mission
         </h3>
         <h3
-          class="w-5/7 p-2 border"
+          class="description-column"
         >
           Description
         </h3>
         <h3
-          class="w-1/1 p-2 border"
+          class="status-column"
         >
           Status
         </h3>
         <div
-          class="w-1/1 border"
+          class="join-column"
         />
-      </li>
-      <li
-        class="flex even:bg-gray-100"
-      >
-        <div
-          class="w-1/1 p-2 border font-bold"
-        >
-          Thaicom
-        </div>
-        <div
-          class="w-5/7 p-2 border text-sm font-medium"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
-        </div>
-        <div
-          class="
- flex
- justify-center
- items-center
- w-1/1
- p-2 border"
-        >
-          <div
-            class="
- bg-secondary
- px-1
- text-font
- uppercase
- place-content-center
- rounded
- font-semibold"
-          >
-            not a memeber
-          </div>
-        </div>
-        <div
-          class="flex justify-center w-1/1 p-2 border"
-        >
-          <button
-            class="bg-transparent border-2 rounded p-2 text-secondary font-semibold text-sm"
-            id="id"
-            type="button"
-          >
-            Join Mission
-          </button>
-        </div>
-      </li>
-      <li
-        class="flex even:bg-gray-100"
-      >
-        <div
-          class="w-1/1 p-2 border font-bold"
-        >
-          Thaicom
-        </div>
-        <div
-          class="w-5/7 p-2 border text-sm font-medium"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur eum porro neque, cumque quidem nisi molestias dolor dolore assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
-        </div>
-        <div
-          class="
- flex
- justify-center
- items-center
- w-1/1
- p-2 border"
-        >
-          <div
-            class="
- bg-primary
- px-1
- text-font
- place-content-center
- rounded
- font-semibold"
-          >
-            Active Member
-          </div>
-        </div>
-        <div
-          class="flex justify-center w-1/1 p-2 border"
-        >
-          <button
-            class="bg-transparent border-2 border-alert rounded px-2 py-0 text-alert font-semibold text-sm"
-            id="id"
-            type="button"
-          >
-            Leave Mission
-          </button>
-        </div>
       </li>
     </ul>
   </div>,
@@ -536,19 +346,15 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        <h1>
-          Rockets
-        </h1>
-      </div>
+      <div
+        class="Rocketslist"
+      />
     </div>
   </body>,
   "container": <div>
-    <div>
-      <h1>
-        Rockets
-      </h1>
-    </div>
+    <div
+      class="Rocketslist"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
