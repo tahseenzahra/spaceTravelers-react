@@ -29,6 +29,8 @@
     "build/",
     "tailwind.config.js",
     "postcss.config.js",
-    "src/setupTests.js"
+    "src/setupTests.js",
+    "src/Redux"
+
   ]
 }
