@@ -8,7 +8,6 @@ export default function Mission() {
   let localMissions = [];
 
   localMissions = JSON.parse(localStorage.getItem("mission"));
-  console.log(localMissions);
   let mission = [];
   localMissions === null ? (mission = missions) : (mission = localMissions);
 
