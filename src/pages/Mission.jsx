@@ -4,11 +4,18 @@ import { loaded, missionStatus } from "../redux/missions/missionSlice";
 import Missions from "../UI/missions";
 
 export default function Mission() {
-  const mission = useSelector((state) => state.mission);
+  const { missions } = useSelector((state) => state.mission);
+  let localMissions = [];
+
+  localMissions = JSON.parse(localStorage.getItem("missions"));
+  console.log(localMissions);
+  let mission = [];
+  localMissions === null ? (mission = missions) : (mission = localMissions);
+
   const dispatch = useDispatch();
-  useEffect{
+  useEffect(() => {
     dispatch(loaded());
-  }
+  }, []);
   const handleJoin = (id) => {
     dispatch(missionStatus(id));
   };
@@ -25,7 +32,6 @@ export default function Mission() {
         <div className='join-column' />
       </li>
       {mission.map((mission) => (
-        console.log(mission),
         <Missions
           key={Math.random()}
           mission={mission.name}

@@ -43,7 +43,7 @@ code {
 
 .mission-column,
 .mission-name {
-  flex: 1;
+  width: 15%;
 }
 
 .description-column,
@@ -58,7 +58,7 @@ code {
 
 .status-column,
 .status-container {
-  flex: 1;
+  width: 15%;
 }
 
 .status-container {
@@ -76,7 +76,7 @@ code {
 
 .join-column,
 .joinbtn-container {
-  flex: 1;
+  width: 15%;
 }
 
 .member-status {
