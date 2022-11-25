@@ -1,87 +1,54 @@
-import React from 'react';
-import Button from '../UI/button';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { loaded, missionStatus } from "../Redux/missions/missionSlice";
+import Missions from "../UI/missions";
 
 export default function Mission() {
-  const joinStyle = 'bg-transparent border-2 rounded p-2 text-secondary font-semibold text-sm';
-  const leaveStyle = 'bg-transparent border-2 border-alert rounded px-2 py-0 text-alert font-semibold text-sm'
-  const joinTitle = 'Join Mission';
-  const leaveTitle = 'Leave Mission';
+  const { missions } = useSelector((state) => state.mission);
+  let localMissions = [];
+
+  localMissions = JSON.parse(localStorage.getItem("mission"));
+  let mission = [];
+  localMissions === null ? (mission = missions) : (mission = localMissions);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loaded());
+  }, []);
+  const handleJoin = (id) => {
+    dispatch(missionStatus(id));
+  };
+
   return (
-    <ul className="flex-col mt-4 mx-8">
-      <div className="kanaderalla">Hala</div>
-      <li className="flex justify-between font-bold even:bg-gray-100">
-        <h3 className="w-1/1 p-2 border">Mission</h3>
-        <h3 className="w-5/7 p-2 border">Description</h3>
-        <h3 className="w-1/1 p-2 border">Status</h3>
-        <div className="w-1/1 border" />
+    <ul
+      className='mission-container'
+      id='missionList'
+    >
+      <li className='mission-header'>
+        <h3 className='mission-column'>Mission</h3>
+        <h3 className='description-column'>Description</h3>
+        <h3 className='status-column'>Status</h3>
+        <div className='join-column' />
       </li>
-      <li className="flex even:bg-gray-100">
-        <div className="w-1/1 p-2 border font-bold">Thaicom</div>
-        <div className="w-5/7 p-2 border text-sm font-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          consequatur eum porro neque, cumque quidem nisi molestias dolor dolore
-          assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
-        </div>
-        <div className="
-          flex
-          justify-center
-          items-center
-          w-1/1
-          p-2 border"
-        >
-          <div className="
-            bg-secondary
-            px-1
-            text-font
-            uppercase
-            place-content-center
-            rounded
-            font-semibold"
-          >
-            not a memeber
-          </div>
-        </div>
-        <div className="flex justify-center w-1/1 p-2 border">
-          <Button
-            title={joinTitle}
-            id="id"
-            className={joinStyle}
-          />
-        </div>
-      </li>
-      <li className="flex even:bg-gray-100">
-        <div className="w-1/1 p-2 border font-bold">Thaicom</div>
-        <div className="w-5/7 p-2 border text-sm font-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          consequatur eum porro neque, cumque quidem nisi molestias dolor dolore
-          assumenda laborum veniam unde ipsa fuga illum aut quo quod maiores.
-        </div>
-        <div className="
-          flex
-          justify-center
-          items-center
-          w-1/1
-          p-2 border"
-        >
-          <div className="
-            bg-primary
-            px-1
-            text-font
-            place-content-center
-            rounded
-            font-semibold"
-          >
-            Active Member
-          </div>
-        </div>
-        <div className="flex justify-center w-1/1 p-2 border">
-          <Button
-            title={leaveTitle}
-            id="id"
-            className={leaveStyle}
-          />
-        </div>
-      </li>
+      {mission.map((mission) => (
+        <Missions
+          key={Math.random()}
+          mission={mission.name}
+          description={mission.description}
+          status={mission.isJoined ? "Active Member" : "not a member"}
+          statusStyle={
+            mission.isJoined
+              ? "member-status active-member"
+              : "member-status inactive-member"
+          }
+          buttonTag={mission.isJoined ? "Leave Mission" : "Join Mission"}
+          id={mission.id}
+          className={
+            mission.isJoined ? "mission-btn leave-btn" : "mission-btn join-btn"
+          }
+          event={() => handleJoin(mission.id)}
+        />
+      ))}
     </ul>
   );
 }

@@ -34,7 +34,7 @@ export default function Dragon() {
           <div className='ml-5'>
             <h1 className='font-bold mb-3 text-2xl'>{dra.name}</h1>
             <p className='mb-3 text-sm font-serif'> {dra.reservation === false ? <></> :<span className='bg-primary rounded-lg px-2 pb-1 mb-4 mr-2'> reserved </span>} {dra.description}</p>
-            <Button className= {dra.reservation === false ? "p-2 bg-blue-600 rounded-lg text-font" :'text-secondary rounded-lg border-solid border-2 border-grey-600 p-2'} Event = {() => handeleReserve(dra.id)} title={dra.reservation === false ?'Reserve Dragon' : 'cancelReservation'} />
+            <Button className= {dra.reservation === false ? "p-2 bg-primary rounded-lg text-secondary " :'text-secondary rounded-lg border-solid border-2 border-grey-600 p-2'} event = {() => handeleReserve(dra.id)} buttonTag={dra.reservation === false ?'Reserve Dragon' : 'cancelReservation'} />
           </div>
         </div>
       ))}
