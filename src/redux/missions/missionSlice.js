@@ -4,7 +4,8 @@ export const loaded = createAsyncThunk(
   'missions/loaded',
   async () => {
     const response = await fetch('https://api.spacexdata.com/v3/missions');
-    return response.data;
+    const data = await response.json();
+    return data;
   },
 );
 
