@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
-import store from './Redux/configureStore';
+import store from './Redux/Store';
 
 import Header from './component/Header';
 import Profile from './pages/Profile';
