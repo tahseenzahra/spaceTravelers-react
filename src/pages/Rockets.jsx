@@ -26,7 +26,7 @@ const Rocket = (props) => {
         <Button
           variant={rocket.reserve === true ? 'outline-primary' : 'primary'}
           type="button"
-          className="rocketBtn p-4 bg-primary opacity-50"
+          className= {rocket.reserve === true ?"rocketBtn text-secondary rounded-lg border-solid border" :"rocketBtn  bg-primary opacity-50"   }  
           onClick={() => dispatch(reserveRocket(rocket.id))}
         >
           {rocket.reserve === true ? 'Cancel reservation' : 'Reserve Rockets'}
