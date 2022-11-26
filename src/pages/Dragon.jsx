@@ -9,17 +9,11 @@ import Button from '../UI/button';
 export default function Dragon() {
   const { dragon } = useSelector((state) => state.dragons);
 
-  let LocalDragon = []
-  
-  if (window !== "undefined")
-      LocalDragon = JSON.parse(localStorage.getItem("dragon"));
-
-  let dragons = []
-  LocalDragon === null ? dragons = dragon : dragons = LocalDragon
-
     const dispatch = useDispatch();
     React.useEffect(() => {
-      dispatch(fetchDragons());
+      if (!dragon.length) {
+        dispatch(fetchDragons());
+      }   
     }, []);
  
   const handeleReserve  = (id) => {
@@ -28,7 +22,7 @@ export default function Dragon() {
 
   return (
     <>
-      {dragons.map((dra, i) => (
+      {dragon.map((dra, i) => (
         <div key={i} className='flex px-20 my-10 mr-60 mx-5'>
           <img className='h-[220px] w-[250px]' src={dra.flickr_images[0]} alt="planet" />
           <div className='ml-5'>

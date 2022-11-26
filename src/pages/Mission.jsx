@@ -5,16 +5,14 @@ import Missions from "../UI/missions";
 
 export default function Mission() {
   const { missions } = useSelector((state) => state.mission);
-  let localMissions = [];
-
-  localMissions = JSON.parse(localStorage.getItem("mission"));
-  let mission = [];
-  localMissions === null ? (mission = missions) : (mission = localMissions);
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loaded());
-  }, []);
+    if (!missions.length) {
+      dispatch(loaded());
+    }
+  });
+
   const handleJoin = (id) => {
     dispatch(missionStatus(id));
   };
@@ -30,7 +28,7 @@ export default function Mission() {
         <h3 className='status-column'>Status</h3>
         <div className='join-column' />
       </li>
-      {mission.map((mission) => (
+      {missions.map((mission) => (
         <Missions
           key={Math.random()}
           mission={mission.name}

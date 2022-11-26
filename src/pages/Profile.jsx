@@ -3,19 +3,14 @@ import { useSelector } from "react-redux";
 
 export default function Profile() {
   const rocketsData = useSelector((state) => state.rockets);
-  let LocalDragon = [];
-  let LocalMission = [];
-
-  try {
-    if (window !== "undefined")
-      LocalDragon = JSON.parse(localStorage.getItem("dragon"));
-      LocalMission = JSON.parse(localStorage.getItem("mission"));
-  } catch (e) {}
+  const { dragon } = useSelector((state) => state.dragons);
+  const { missions } = useSelector((state) => state.mission);
 
   const rocketProfile = rocketsData.filter((rocket) => rocket.reserve === true);
-  const dragonProfile =
-    LocalDragon.filter((dra) => dra.reservation === true) || [];
-  const missionProfile = LocalMission.filter((mission) => mission.isJoined === true) || [];
+  const dragonProfile = dragon.filter((dra) => dra.reservation === true)
+  const missionProfile = missions.filter((mission) => mission.isJoined === true)
+
+  
   return (
     <div className='flex justify-between px-40'>
       <div>
