@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# spaceTravelers-react
+# Space Travelers' Hub
 
-Space Travelers is an app built with React | CSS | React-router | Jest | Redux-toolkit. this is an app where users can board available missions and rockets.
+Space Travelers' Hub is an app built with React | CSS | React-router | Jest | Redux-toolkit. this is an app where users can board available missions and rockets.
 
 ## Built With
 
@@ -43,6 +43,7 @@ To run tests on this project if you tweaked something, run the following command
 - `npx eslint .`
 - run your test using `npm run test`
 
+
 ## Authors
 
 👤 **Tahseen Zahra**
@@ -63,6 +64,21 @@ To run tests on this project if you tweaked something, run the following command
 - Twitter: [@Khaled-AlKhateeb](https://twitter.com/KhaledA93751489)
 - LinkedIn: [@Khaled-AlKhateeb](https://www.linkedin.com/in/khaled-al-khateeb-3a1013247/)
 
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Ashe546/space-travelers/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to the react-redux and jest team
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
