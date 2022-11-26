@@ -1,14 +1,45 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
+<div align="center">
 
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-# 📖 Space Travelers' Hub <a name="about-project"></a>
+  <h3><b>Microverse README Template</b></h3>
 
-Space Travelers' Hub is an app built with React | CSS | React-router | Jest | Redux-toolkit. this is an app where users can board available missions and rockets.
+</div>
 
-## 🛠 Built With <a name="built-with">
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Run tests](#run-tests)(#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
+
+# 📖 [spaceTravelers-react] <a name="about-project"></a>
+
+> Space Travelers is an app built with React | CSS | React-router | Jest | Redux-toolkit. this is an app where users can board available missions and rockets.
+**[spaceTravelers-react]** is used to reserve and cancel the space equipments.
+
+## 🛠 Built With <a name="built-with"></a>
+- Javascript.
+- CSS.
+- React.
+- Jest.
+- Webpack.
 
 ### Tech Stack <a name="tech-stack"></a>
-
 <details>
   <summary>Client</summary>
   <ul>
@@ -22,29 +53,44 @@ Space Travelers' Hub is an app built with React | CSS | React-router | Jest | Re
 
 ### Key Features <a name="key-features"></a>
 
-- **[Feach data from space-x api]**
-- **[Reserve/join mission, dragon, and rocket]**
-- **[Desplay reserved/joined data on profile page]**
+- Feach data from space-x api
+- Reserve/join mission, dragon, and rocket
+- Desplay reserved/joined data on profile page
 
-## Live Demo
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[Live Demo Link](Comming soon ....)
+## 🚀 Live Demo <a name="live-demo"></a>
 
-## Getting Started
+- [Live Demo Link](not available)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running follow these simple example steps.
 
-# Prerequisite
+### Prerequisites
 
-- Code editor preferably VsCode
-- Browser
-# SetUp
+In order to run this project you need:
+
+- code editer
+
+### Setup
+
+Clone this repository to your desired folder:
 
 - Open up your command line
-- Clone this repo to your machine by using Git clone: Git clone `https://github.com/tahseenzahra/spaceTravelers-react.git`
+- Clone this repo to your machine by using Git clone:
 
+Example commands:
+```sh
+ $ cd my-folder
+ $ git clone git@github.com:tahseenzahra/spaceTravelers-react.git
+```
 
 ### Install
+
+Install this project with:
 
 - `npm i`
 - `npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x @babel/preset-env@7.x  @babel/preset-react@7.x`
@@ -55,10 +101,11 @@ To get a local copy up and running follow these simple example steps.
 
 To run tests on this project if you tweaked something, run the following command
 
-- `npx stylelint "\*_/_.{css,scss}"`
-- `npx eslint .`
-- run your test using `npm run test`
-
+```sh
+  $ npx stylelint "\*_/_.{css,scss}"
+  $ npx eslint .
+  $ npm run test
+```
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -70,9 +117,9 @@ To run tests on this project if you tweaked something, run the following command
 
 👤 **Ashenafi Endashaw Abera**
 
-- GitHub: [@githubhandle](https://github.com/Ashe546)
-- Twitter: [@twitterhandle](https://twitter.com/Ashenaf54470930)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/mwlite/in/ashenafi-endashaw-7a50b318a)
+- GitHub: [@Ashe](https://github.com/Ashe546)
+- Twitter: [@Ashe](https://twitter.com/Ashenaf54470930)
+- LinkedIn: [@Ashe](https://www.linkedin.com/mwlite/in/ashenafi-endashaw-7a50b318a)
 
 👤 **Khaled Al-Khateeb**
 
@@ -80,31 +127,33 @@ To run tests on this project if you tweaked something, run the following command
 - Twitter: [@Khaled-AlKhateeb](https://twitter.com/KhaledA93751489)
 - LinkedIn: [@Khaled-AlKhateeb](https://www.linkedin.com/in/khaled-al-khateeb-3a1013247/)
 
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[Modify the styling to look more appiling]**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Ashe546/space-travelers/issues).
+Feel free to check the [issues page](https://github.com/tahseenzahra/spaceTravelers-react/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+If you like this project give it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Hat tip to the react-redux and jest team
+
+I would like to thank to the people who contributes to this repo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
